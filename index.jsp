@@ -4,6 +4,11 @@
 
 <html>
 <head>
+<script>
+function myFunction(){
+	alert("Hello World!");
+}
+</script>
 <meta http-equiv="Content-Type" content="text/html; charset=GB18030">
 <link rel="stylesheet" type="text/css" href="style.css">
 <title>文档系统</title>
@@ -13,9 +18,15 @@
 
 
 <div id="header">
-<center>
-<h1 style="color:#000000"><b>文档系统</b></h1>
-</center>
+
+<div id="header_first">
+<img style="float:left" src="images/header_first1.gif"></img>
+<img style="float:left" src="images/header_first2.jpg"></img>
+<img style="float:left" src="images/header_first3.jpg"></img>
+</div>
+<div id="header_second">
+<h1 style="color:#000000;text-align:center;padding-top:25px"><b>文档系统</b></h1>
+</div>
 </div>
 
 
@@ -56,6 +67,7 @@
 
 <p>
 <br/><br/>
+
 项目应用
 根据项目系统架构，性能测试覆盖的系统项目应用主要包括以下子系统（模块）：
 地址搜索，业务接口，业务配置,接口平台；
@@ -70,10 +82,6 @@ Telant资源应用；
 每个应用都对应独立或者共用的数据库schema;数据库和资源项目生产环境共用服务器主机（P595），但为不同分区，应相互不影响。
 
 
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-
-
-
 </p>
 
 <%
@@ -83,12 +91,21 @@ Telant资源应用；
 
 %>
 
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+
+<button onclick="myFunction()">查询</button>
+
+
+
 
 </div>
 
 <div id="footer">
-        Richard &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2017
+        Richard &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2017  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        
+<script>
+document.write(Date());
+</script>
 </div>
 
 
