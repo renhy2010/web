@@ -52,6 +52,7 @@ div#header_first{
 	height:100px;
 	display:inline-block;
 	float:left;
+	background:transparent url(images/bg_header.jpg) no-repeat;
 
 }
 
@@ -65,6 +66,11 @@ div#header_second{
     float:left;
 
 }
+
+div#header_second a{
+	text-decoration:none;
+}
+
 
 div#navfirst{
 	margin:0,0,0,12px;
@@ -98,13 +104,10 @@ ul#menu li,ul#menu a{
 	display:block;
 	height:48px;
 	border-bottom:0;
+	text-decoration:none;
+	
 }
 
-div#navfirst ul#menu li a{
-    text-indent:0;
-    overflow:hidden;
-	text-docoration:none;
-}
 
 
 
@@ -130,26 +133,28 @@ div#navfirst ul#menu a:active
 	color:#000000;	
 }
 
-#r{
+#family{
 	left:0;
-	width:155px;
-	font-weight:bold;	
- }
- 
-#h{
-	left:155px;
-	width:157px;
+	width:150px;
 	font-weight:bold;
 }
 
-#s{
-	left:312px;
-	width:157px;
-	font-weight:bold;		
+#richard{
+	left:150px;
+	width:150px;
+	font-weight:bold;	
+ }
+ 
+#henry{
+	left:300px;
+	width:150px;
+	font-weight:bold;
 }
 
-body.Shirley #s{
-	background:transparent url(images/bg_temp.png) -312px -48px no-repeat;
+#shirley{
+	left:450px;
+	width:150px;
+	font-weight:bold;		
 }
 
 
@@ -222,6 +227,22 @@ div#maincontent{
 	width:1020px;
 	min-height:800px;
 }
+
+div#maincontent div{
+	margin:0 0 0 25px;
+	padding:0;
+	padding-bottom:30px;
+	border:0;
+	border-bottom:1px solid #aaa;
+	width:980px;	
+	min-height:200px;
+	
+}
+div#maincontent div#m1{
+	min-height:500px;
+	
+}
+
 
 div#footer{
 	clear:both;
