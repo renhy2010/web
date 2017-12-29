@@ -229,9 +229,9 @@ div#maincontent{
 }
 
 div#maincontent div{
-	margin:0 0 0 25px;
+	margin:0 0 0 0;
 	padding:0;
-	padding-bottom:30px;
+	padding-bottom:0;
 	border:0;
 	border-bottom:1px solid #aaa;
 	width:980px;	
@@ -243,6 +243,61 @@ div#maincontent div#m1{
 	
 }
 
+div#maincontent div#m1 div.imageRotation{
+	margin:10px 0 0 100px;
+	height:450px;
+	width:570px;
+	overflow:hidden;
+	position:relative;
+	border:10px solid #eee;
+	background-color:#eee;
+	border-radius:5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;	
+}
+
+div#m1 div.imageRotation div.imageBox{
+	position:relative;
+	height:420px;
+    top:0px;
+    left:0px;
+	overflow:hidden;
+}
+
+div.imageBox img{
+	display:block;
+	height:420px;
+	width:570px;
+	float:left;
+	border:none;
+}
+
+div#m1 div.imageRotation div.icoBox{
+	position:relative;
+	top:5px;
+	bottom:0px;
+	left:247px;
+	width:76px;
+	height:12px;
+	text-align:center;
+	line-height:40px;
+}
+
+.icoBox span{
+	display:block;
+	float:left;
+	width:12px;
+	height:12px;
+	margin-left:3px;
+	overflow:hidden;
+	cursor:pointer;
+	background:url("images/ico.png") 0px 0px no-repeat;
+}
+
+.icoBox span.active{
+	background-position:0px -12px;
+	cursor:default;
+}
 
 div#footer{
 	clear:both;

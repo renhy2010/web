@@ -4,14 +4,11 @@
 
 <html>
 <head>
-<script>
-function myFunction(){
-	alert("Hello World!");
-}
-</script>
+<script type="text/javascript" src="jquery-3.2.1.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=GB18030">
 <link rel="stylesheet" type="text/css" href="style.css">
 <title>文档系统</title>
+
 </head>
 <body>
 <div id="wrapper">
@@ -78,8 +75,64 @@ function myFunction(){
 <div id="maincontent">
 <div id="m1">
 <h2>Family</h2>
-<script>
+<div class="imageRotation">
+<div class="imageBox">
+<a href="index.jsp" target="_blank"><img src="images/photos/family/1.jpg" /></a>
+<a href="index.jsp" target="_blank"><img src="images/photos/family/2.jpg" /></a>
+<a href="index.jsp" target="_blank"><img src="images/photos/family/3.jpg" /></a>
+<a href="index.jsp" target="_blank"><img src="images/photos/family/4.jpg" /></a>
+<a href="index.jsp" target="_blank"><img src="images/photos/family/5.jpg" /></a>
+</div>
+<div class="icoBox">
+<span class="active" rel="1">1</span>
+<span rel="2">2</span>
+<span rel="3">3</span>
+<span rel="4">4</span>
+<span rel="5">5</span>
+</div>
+</div>
+
+<script type="text/javascript">
+//$(document).ready(function(){
+//	$("div.imageBox").animate({left:'-570px'},1000);
+//});
+
+$(document).ready(function(){	
+//	
+	//获取参数
+	var imageBox=$("div.imageBox");//获取图片容器
+	var	imageWidth=570;                 //图片宽度
+
+	var	imageNum=5; 			//图片数量
+
+	var	activeID=1;									//当前图片ID
+	var	nextID=0;										//下一个图片ID
+	var	intervalTime=500;								//间隔时间
+	var	setIntervalID;
+	var	speed=5000;										//速度
+	var	imageReelWidth=imageWidth*imageNum;				//图片卷的宽度
+		
+	//设置图片容器的宽度
+		
+	$(imageBox).css({'width':imageReelWidth+"px"});
+
+		
+	//图片轮转函数	
+
+	setIntervalID=setInterval(function(){
+		nextID=activeID<=4?activeID+1:1;
+		$(imageBox).animate({left:"-"+(nextID-1)*imageWidth+"px"},speed);
+		activeID=nextID;
+	},intervalTime);
+	
+	
+	
+	});
+
+
 </script>
+
+
 </div>
 <div id="m2"></div>
 <div id="m3"></div>
@@ -108,9 +161,9 @@ Telant资源应用；
 
 %>
 <button onclick="myFunction()">查询</button>
+
+
 </div>
-
-
 
 </div>
 
